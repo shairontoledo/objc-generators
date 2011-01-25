@@ -1,0 +1,19 @@
+#import "<%= @class_name %>.h"
+
+@implementation <%= @class_name %>
+@synthesize <%= @properties.map{|prop| prop.name}.join(', ') %>;
+- (id)init {
+    if ((self = [super init])) {
+        // Initialization code here.
+    }
+    
+    return self;
+}
+
+- (void)dealloc {
+    // Clean-up code here.
+    
+    [super dealloc];
+}
+
+@end

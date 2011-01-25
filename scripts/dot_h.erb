@@ -1,0 +1,7 @@
+#import <Foundation/Foundation.h>
+
+@interface <%= @class_name %> : NSObject {
+<%=@properties.map{|prop| "  #{prop.declare}"}.join("\n") %>    
+}
+<%=@properties.map{|prop| prop.at_property}.join("\n") %>  
+@end

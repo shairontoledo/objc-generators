@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+$: << File.expand_path(File.dirname(__FILE__))
+require 'models'
+
+@task_type = (ARGV.shift || "unknown").to_s.downcase.to_sym
+
+#/generate model Person name:string code:float thenumber:integer active:bool created_at:date updated_at:date
+@class_name = ARGV.shift
+case @task_type 
+when :model
+  Make::ModelFiles.new(@class_name, Property.parse).write_files
+  
+end
