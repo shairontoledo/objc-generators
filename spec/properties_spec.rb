@@ -1,4 +1,4 @@
-$: << File.join(File.expand_path(File.dirname(__FILE__)), "../../Scripts")
+$: << File.join(File.expand_path(File.dirname(__FILE__)), "../scripts")
 require "models"
 
 
